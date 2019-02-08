@@ -1,0 +1,9 @@
+#Create a docker machine
+docker-machine create --driver virtualbox --virtualbox-memory 6000 confluent
+
+#Configure terminal window to attach it to your new Docker machine
+eval $(docker-machine env confluent)
+
+
+#Start the docker container, given that you have docker-compose.yml
+docker-compose up -d
